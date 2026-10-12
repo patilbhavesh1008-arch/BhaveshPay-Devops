@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  bhaveshpay:
+    image: ${DOCKERHUB_USER}/bhaveshpay-web:${IMAGE_TAG:-latest}
+    ports:
+      - "8080:80"
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      update_config:
+        parallelism: 1
+        delay: 10s
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 128M
+    networks:
+      - bhaveshpay-net
+networks:
+  bhaveshpay-net:
+    driver: overlay

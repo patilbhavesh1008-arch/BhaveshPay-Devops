@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1f44"><title>BhaveshPay — Demo Wallet</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="brand"><span class="brand-mark">B</span><span>Bhavesh<span class="brand-light">Pay</span></span></div>
+  <div class="profile"><div class="avatar">BP</div><div><strong>Bhavesh Patil</strong><small>Demo account</small></div></div>
+  <nav><a class="nav-item active" href="#overview">▦ <span>Overview</span></a><a class="nav-item" href="#transfer">↗ <span>Send money</span></a><a class="nav-item" href="#transactions">↻ <span>Transactions</span></a><a class="nav-item" href="#services">▣ <span>Services</span></a></nav>
+  <div class="sidebar-note"><span class="pulse"></span> Demo mode is active<small>No real money is moved.</small></div>
+  <div class="sidebar-footer">Built for a Docker + AWS portfolio project.</div>
+</aside>
+<main class="main-content" id="overview">
+<header class="topbar"><div><p class="eyebrow">MONDAY, YOUR FINANCES AT A GLANCE</p><h1>Good day, Bhavesh <span>✦</span></h1><p class="muted">Here’s what’s happening with your demo wallet.</p></div><div class="top-actions"><span class="secure-pill">● Demo wallet</span><div class="avatar small">BP</div></div></header>
+<section class="hero-grid">
+<article class="balance-card"><div class="balance-top"><span>Available demo balance</span><span class="card-chip">BPay</span></div><div class="balance-amount"><span>₹</span><strong id="balance">24,850.00</strong></div><div class="balance-bottom"><span>•••• •••• •••• 1008</span><span class="balance-status">↗ Demo account</span></div><div class="card-orb orb-one"></div><div class="card-orb orb-two"></div></article>
+<article class="stat-card"><div class="stat-icon purple">↗</div><p class="muted">Money sent</p><h2 id="sent-total">₹4,250</h2><span class="stat-caption positive">↑ Demo activity</span></article>
+<article class="stat-card"><div class="stat-icon green">↙</div><p class="muted">Money received</p><h2>₹8,700</h2><span class="stat-caption">This month (sample)</span></article>
+</section>
+<section class="content-grid">
+<article class="panel transfer-panel" id="transfer"><div class="panel-heading"><div><h2>Quick transfer</h2><p class="muted">Try a simulated transfer</p></div><span class="heading-icon">↗</span></div>
+<form id="transfer-form"><label for="recipient">Recipient name</label><input id="recipient" name="recipient" placeholder="e.g. Aditi Sharma" maxlength="40" required><label for="amount">Amount (₹)</label><div class="amount-input"><span>₹</span><input id="amount" name="amount" type="number" min="1" max="50000" step="1" placeholder="500" required></div><label for="note">Note <span class="optional">(optional)</span></label><input id="note" name="note" placeholder="What's it for?" maxlength="70"><button class="primary-button" type="submit">Simulate transfer <span>→</span></button><p class="form-disclaimer">Demo only — this does not contact a bank or payment network.</p><p class="form-message" id="form-message" role="status" aria-live="polite"></p></form></article>
+<article class="panel activity-panel" id="transactions"><div class="panel-heading"><div><h2>Recent activity</h2><p class="muted">Sample transactions and demo transfers</p></div><span class="heading-icon">↻</span></div>
+<div class="transaction-list" id="transaction-list">
+<div class="transaction"><div class="transaction-icon blue">🛍</div><div class="transaction-info"><strong>Shopping</strong><small>Today · Sample transaction</small></div><div class="transaction-amount debit">− ₹1,250</div></div>
+<div class="transaction"><div class="transaction-icon mint">↙</div><div class="transaction-info"><strong>Salary credit</strong><small>Yesterday · Sample transaction</small></div><div class="transaction-amount credit">+ ₹8,700</div></div>
+<div class="transaction"><div class="transaction-icon peach">☕</div><div class="transaction-info"><strong>Café payment</strong><small>08 Oct · Sample transaction</small></div><div class="transaction-amount debit">− ₹320</div></div>
+<div class="transaction"><div class="transaction-icon lavender">↗</div><div class="transaction-info"><strong>Transfer to Rohan</strong><small>07 Oct · Sample transaction</small></div><div class="transaction-amount debit">− ₹500</div></div>
+</div><p class="list-footnote">All activity shown here is fictional sample data.</p></article>
+</section>
+<section class="services-section" id="services"><div class="section-heading"><div><h2>Explore services</h2><p class="muted">A preview of a digital wallet experience</p></div></div><div class="service-grid">
+<div class="service-card"><span class="service-symbol purple">▤</span><strong>Mobile recharge</strong><small>UI preview</small></div><div class="service-card"><span class="service-symbol green">ϟ</span><strong>Electricity bills</strong><small>UI preview</small></div><div class="service-card"><span class="service-symbol orange">▰</span><strong>Travel & tickets</strong><small>UI preview</small></div><div class="service-card"><span class="service-symbol blue">⌂</span><strong>Bank services</strong><small>UI preview</small></div>
+</div></section>
+<footer class="page-footer">BhaveshPay · Personal portfolio demo · No real payments, accounts, or financial data.</footer>
+</main></div><script src="app.js"></script></body></html>
